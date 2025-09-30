@@ -64,7 +64,8 @@ algorithm-visualizer/
 ├── app/                    # Next.js App Router
 │   ├── page.tsx           # Homepage with constellation map
 │   ├── algorithm/[id]/    # Dynamic algorithm pages
-│   └── layout.tsx         # Root layout
+│   ├── playground/        # Playground for custom data
+│   └── badges/            # Achievement badges
 ├── components/
 │   ├── layout/            # Header, ThemeProvider
 │   ├── ui/                # AlgorithmCard, ConstellationMap
@@ -75,7 +76,8 @@ algorithm-visualizer/
 │   ├── store/             # Zustand state management
 │   └── utils/             # Utility functions
 ├── data/
-│   └── algorithms.ts      # Algorithm metadata
+│   ├── algorithms.ts      # Algorithm metadata
+│   └── badges.ts          # Badge definitions
 └── types/
     └── index.ts           # TypeScript definitions
 ```
@@ -106,14 +108,20 @@ algorithm-visualizer/
 4. Use playback controls to step through the algorithm
 5. Toggle between Python and JavaScript code examples
 
-### Example: K-Means Clustering
+### Using the Playground
 
-1. Go to K-Means page
-2. Set K (number of clusters): 3
-3. Set number of points: 50
-4. Click "New Data"
-5. Click "Play" to watch the algorithm converge
-6. Adjust speed with speed controls
+1. Go to Playground page
+2. Upload custom CSV/JSON datasets
+3. Adjust algorithm parameters
+4. Run algorithms on your own data
+5. Try example datasets
+
+### Earning Badges
+
+1. Visit Badges page
+2. Complete algorithms to unlock achievements
+3. Track your progress
+4. Unlock 20+ unique badges
 
 ## 🎯 Current Implementation Status
 
@@ -125,13 +133,13 @@ algorithm-visualizer/
 - Step-by-step visualization engine
 - Interactive controls and parameter adjustment
 - Code preview (Python/JavaScript)
+- Playground with custom data upload
+- Badge achievement system (20+ badges)
 - Progress tracking system
 
 ### 🚧 To Be Implemented
 - Additional algorithm implementations (Linear Regression, BFS, DFS, etc.)
-- Quiz system with gamification
-- Badge achievements
-- File upload for custom datasets
+- Quiz system
 - Mobile-optimized controls
 - Algorithm comparison mode
 
