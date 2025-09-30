@@ -1,36 +1,160 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AlgoViz - Interactive Algorithm Visualizer 🧠
 
-## Getting Started
+An interactive, visually stunning platform for exploring and learning data science algorithms through step-by-step visualizations and hands-on experimentation.
 
-First, run the development server:
+## ✨ Features
 
+### 🌌 Constellation Map Navigation
+- Unique "Google Earth-style" algorithm exploration
+- Algorithms displayed as connected nodes in an interactive star map
+- Visual connections show relationships between algorithms
+- Hover effects and smooth animations
+
+### 📊 Comprehensive Algorithm Coverage
+- **Supervised Learning**: Linear Regression, Logistic Regression, Decision Trees, Random Forest, Neural Networks
+- **Unsupervised Learning**: K-Means, PCA, DBSCAN, Hierarchical Clustering
+- **Optimization**: Gradient Descent, Genetic Algorithms, Simulated Annealing
+- **Search & Graph**: BFS, DFS, Dijkstra's, A*, PageRank
+- **Statistical Methods**: Bayes Theorem, Hypothesis Testing
+
+### 🎮 Interactive Visualizations
+- Step-by-step algorithm execution with animations
+- Real-time parameter adjustment (sliders for K, learning rate, etc.)
+- Playback controls (play, pause, next, previous, speed control)
+- Canvas-based rendering for smooth performance
+
+### 💡 Learning Tools
+- Side-by-side code comparison (Python & JavaScript)
+- Mathematical explanations
+- Real-world use cases for each algorithm
+- Time and space complexity analysis
+- Progress tracking and badge system
+
+### 🎨 Modern UI/UX
+- Dark/Light mode toggle
+- Glassmorphism design elements
+- Smooth Framer Motion animations
+- Responsive design for all devices
+- Custom scrollbars and accessibility features
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm
+
+### Installation
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Start the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open your browser and navigate to `http://localhost:3000`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+algorithm-visualizer/
+├── app/                    # Next.js App Router
+│   ├── page.tsx           # Homepage with constellation map
+│   ├── algorithm/[id]/    # Dynamic algorithm pages
+│   └── layout.tsx         # Root layout
+├── components/
+│   ├── layout/            # Header, ThemeProvider
+│   ├── ui/                # AlgorithmCard, ConstellationMap
+│   ├── algorithm/         # ControlPanel
+│   └── visualizations/    # Algorithm-specific visualizations
+├── lib/
+│   ├── algorithms/        # Algorithm implementations
+│   ├── store/             # Zustand state management
+│   └── utils/             # Utility functions
+├── data/
+│   └── algorithms.ts      # Algorithm metadata
+└── types/
+    └── index.ts           # TypeScript definitions
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: Next.js 15 (App Router, Turbopack)
+- **Language**: TypeScript
+- **Styling**: TailwindCSS
+- **Animations**: Framer Motion
+- **State Management**: Zustand
+- **Visualization**: Canvas API, Recharts, D3.js
+- **ML**: TensorFlow.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📖 Usage
 
-## Deploy on Vercel
+### Exploring Algorithms
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Constellation View**: Click on any algorithm node in the star map to zoom into its details
+2. **Grid View**: Toggle to see all algorithms in a card layout
+3. **Filter by Category**: Use category buttons to filter algorithms
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Visualizing Algorithms
+
+1. Navigate to an algorithm page
+2. Adjust parameters using sliders (e.g., K for K-Means)
+3. Click "New Data" to generate random data
+4. Use playback controls to step through the algorithm
+5. Toggle between Python and JavaScript code examples
+
+### Example: K-Means Clustering
+
+1. Go to K-Means page
+2. Set K (number of clusters): 3
+3. Set number of points: 50
+4. Click "New Data"
+5. Click "Play" to watch the algorithm converge
+6. Adjust speed with speed controls
+
+## 🎯 Current Implementation Status
+
+### ✅ Completed
+- Project setup with Next.js 15 + TypeScript
+- Homepage with constellation map and grid view
+- Dark/light theme toggle
+- K-Means clustering full implementation
+- Step-by-step visualization engine
+- Interactive controls and parameter adjustment
+- Code preview (Python/JavaScript)
+- Progress tracking system
+
+### 🚧 To Be Implemented
+- Additional algorithm implementations (Linear Regression, BFS, DFS, etc.)
+- Quiz system with gamification
+- Badge achievements
+- File upload for custom datasets
+- Mobile-optimized controls
+- Algorithm comparison mode
+
+## 🤝 Contributing
+
+Contributions are welcome! To add a new algorithm:
+
+1. Add metadata to `data/algorithms.ts`
+2. Implement algorithm logic in `lib/algorithms/[name].ts`
+3. Create visualization component in `components/visualizations/`
+4. Update algorithm page to include new visualization
+
+See [CLAUDE.md](../CLAUDE.md) for detailed development guidelines.
+
+## 🎓 Educational Use
+
+This project is perfect for:
+- Computer Science students learning algorithms
+- Data Science bootcamps and courses
+- Self-learners exploring machine learning
+- Teachers demonstrating algorithms visually
+- Interview preparation and algorithm practice
+
+---
+
+**Built with [Claude Code](https://claude.com/claude-code)** 🤖
