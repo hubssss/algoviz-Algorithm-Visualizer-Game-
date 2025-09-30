@@ -163,6 +163,4 @@ This project is perfect for:
 - Teachers demonstrating algorithms visually
 - Interview preparation and algorithm practice
 
----
 
-**Built with [Claude Code](https://claude.com/claude-code)** 🤖
